@@ -9,7 +9,7 @@ const darkStyles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'transparent', // Dark background
         justifyContent: 'flex-start',
-        padding: 20,
+        padding: 10,
     },
     imageContainer: {
         borderRadius: 75,
@@ -30,16 +30,25 @@ const darkStyles = StyleSheet.create({
         borderColor: '#61dafb',
     },
     descriptionContainer: {
-        backgroundColor: '#333333', // Darker background for description
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Darker background for description
         borderRadius: 10,
+        borderColor: '#61DAFB', // Border color
+        borderWidth: 2, // Make the border visible
+    
+        // Adding shadow for glowing effect
+        shadowColor: '#61DAFB', // Glow color
+        shadowOffset: {
+          width: 0,
+          height: 0,
+        },
+        shadowOpacity: 0.5,
+        shadowRadius: 10,
+        elevation: 10, // For Android
+    
         padding: 15,
         marginBottom: 20,
         width: '100%',
-        elevation: 5,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.3,
-        shadowRadius: 3.5,
+      
     },
     socialLinks: {
         flexDirection: 'row',
@@ -55,9 +64,13 @@ const darkStyles = StyleSheet.create({
         alignItems: 'center',
     },
     toggleContainer: {
-        marginTop: 20,
-        alignItems: 'center',
+        alignSelf: 'flex-end'
     },
+    linkedin: {backgroundColor:'#4CBB85'},
+    github: {backgroundColor: '#4D4D4D'},
+    twitter: {backgroundColor: '#A2D6E9'},
+    instagram: {backgroundColor: '#BF5A7A'},
+    facebook: {backgroundColor: '#4B8FBF'}
 });
 
 export default darkStyles

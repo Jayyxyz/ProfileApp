@@ -2,10 +2,10 @@ import { StyleSheet } from "react-native"
 
 const darkFont = StyleSheet.create({
     name: {
-        fontSize: 35,
+        fontSize: 40,
         
         marginBottom: 5,
-        color: '#E6E6FA',
+        color: '#EAEAEA',
     },
     
     bio: {
@@ -13,7 +13,7 @@ const darkFont = StyleSheet.create({
         color: '#555',
         textAlign: 'center',
         marginBottom: 10,
-        color: '#E6E6FA',
+        color: '#A7C6ED',
     },
     description: {
         

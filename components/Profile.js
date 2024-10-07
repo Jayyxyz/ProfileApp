@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {  Text, Image, View, TouchableOpacity, Switch, ImageBackground} from 'react-native';
+import {  Text, Image, View, TouchableOpacity, Switch,  ImageBackground} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'; 
 import lightStyles from './styles/Profile_styles';
 import darkStyles from './styles/dark'
@@ -25,7 +25,7 @@ export default function Profile(){
     };
     useEffect(() => {
         loadFonts().then(() => setFontsLoaded(true)); // Load fonts and set loaded state
-    }, console.log('Fonts loaded successfully!'));
+    },);
     
 
 
@@ -40,48 +40,11 @@ export default function Profile(){
     return(
         
 
-       <ImageBackground source={isDarkMode ? require('../assets/Dark.jpg') : require('../assets/Light.jpg')} // Replace with your images
+       <ImageBackground source={isDarkMode ? require('../assets/night.jpg') : require('../assets/Light.jpg')} // Replace with your images
        style={styles.container}
        resizeMode="cover">
-       <View style={styles.container}>
-        <View style={styles.imageContainer}>
-        <Image source={require('../assets/founder.jpg')} style={styles.image}/>
-        </View>
-        <Text style={[Fontstyles.name, {fontFamily: 'Lobster-Regular'}]}>Jayrold Llarenas</Text>
-        
-        <View style={styles.descriptionContainer}>
-          
-        <Text style={[Fontstyles.bio, {fontFamily: 'Lobster-Regular', fontSize: 20}]}>------- Software Developer ------</Text>
-        
-        <Text style={[Fontstyles.bio, {marginTop: -10},  {fontFamily: 'Lobster-Regular'}]}>Javascript | React JS | Python | Java</Text>
-        <Text style={Fontstyles.description}> A passionate software developer and tech enthusiast.
-        Currently, I’m a third-year IT student from the Philippines</Text>
-
-        </View>
-        <View style={styles.socialLinks}>
-        <TouchableOpacity style={[styles.button, { backgroundColor: socialMediaColors.linkedin }]}>
-                        <Icon name="linkedin" size={30} backcolor="#ffffff" />
-                        
-                    </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, { backgroundColor: socialMediaColors.github }]}>
-                        <Icon name="github" size={30} color="#ffffff" />
-                        
-                    </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, { backgroundColor: socialMediaColors.twitter }]}>
-                        <Icon name="twitter" size={30} color="#ffffff" />
-                       
-                    </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, { backgroundColor: socialMediaColors.instagram }]}>
-                        <Icon name="instagram" size={30} color="#ffffff" />
-                        
-                    </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, { backgroundColor: socialMediaColors.facebook }]}>
-                        <Icon name="facebook" size={30} color="#ffffff" />
-                        
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.toggleContainer}>
-                <Text style={Fontstyles.bio}>{isDarkMode ? 'Dark Mode' : 'Light Mode'}</Text>
+        <View style={styles.toggleContainer}>
+                
                 <Switch
                     value={isDarkMode}
                     onValueChange={toggleDarkMode}
@@ -89,6 +52,43 @@ export default function Profile(){
                     thumbColor={isDarkMode ? '#f5dd4b' : '#f4f3f4'}
                 />
             </View>
+       <View style={styles.container}>
+        <View style={styles.imageContainer}>
+        <Image source={require('../assets/Pic.png')} style={styles.image}/>
+        </View>
+        <Text style={[Fontstyles.name, {fontFamily: 'Lobster-Regular'}]}>Jayrold Llarenas</Text>
+        
+        <View style={styles.descriptionContainer}>
+          
+        <Text style={[Fontstyles.bio, {fontFamily: 'Lobster-Regular', fontSize: 20}]}>Software Developer</Text>
+        
+        <Text style={[Fontstyles.bio, {marginTop: -10,fontFamily: 'Lobster-Regular'}]}>Javascript | React JS | Python | Java</Text>
+        
+
+        </View>
+        <View style={styles.socialLinks}>
+        <TouchableOpacity style={[styles.button, styles.linkedin]}>
+                        <Icon name="linkedin" size={25} color="#ffffff" />
+                        
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[styles.button, styles.github]}>
+                        <Icon name="github" size={25} color="black" />
+                        
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[styles.button, styles.twitter]}>
+                        <Icon name="twitter" size={25} color="#ffffff" />
+                       
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[styles.button, styles.instagram]}>
+                        <Icon name="instagram" size={25} color="#ffffff" />
+                        
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[styles.button, styles.facebook]}>
+                        <Icon name="facebook" size={25} color="#ffffff" />
+                        
+                    </TouchableOpacity>
+                </View>
+                
        </View>
        </ImageBackground>
 
@@ -97,9 +97,9 @@ export default function Profile(){
     
 }
 const socialMediaColors = {
-    linkedin: '#0077B5',
-    github: '#333333',
-    twitter: '#1DA1F2',
-    instagram: '#E1306C',
-    facebook: '#4267B2'
+    linkedin: '#9DC183',
+    github: '#F5F5DC',
+    twitter: '#A9C9D1',
+    instagram: '#F4A460',
+    facebook: '#87CEEB'
 };

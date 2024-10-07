@@ -7,7 +7,7 @@ const lightStyles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'transparent',
         justifyContent: 'flex-start',
-        padding: 20,
+        padding: 10,
         
     },
     imageContainer: {
@@ -30,7 +30,8 @@ const lightStyles = StyleSheet.create({
         height: 150,
         marginBottom: 5,
         borderWidth: 2,
-        borderColor: '#61dafb',
+        borderColor: '#9DC183',
+        
     },
     
     descriptionContainer: {
@@ -47,7 +48,7 @@ const lightStyles = StyleSheet.create({
         padding: 15,
         marginBottom: 20,
         width: '100%', // Full width for description container
-        elevation: 5, // Shadow effect for depth
+        elevation: 10, // Shadow effect for depth
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
@@ -76,5 +77,15 @@ const lightStyles = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold',
     },
+    toggleContainer: {
+        alignSelf: 'flex-end'
+        
+    },
+
+    linkedin: {backgroundColor:'#9DC183'},
+    github: {backgroundColor: '#F5F5DC'},
+    twitter: {backgroundColor: '#A9C9D1'},
+    instagram: {backgroundColor: '#F4A460'},
+    facebook: {backgroundColor: '#87CEEB'}
 })
 export default lightStyles;
