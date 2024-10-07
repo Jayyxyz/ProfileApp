@@ -10,31 +10,31 @@ import * as Font from 'expo-font';
 
 
 export default function Profile(){
-    // State to manage dark mode
+    
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [fontsLoaded, setFontsLoaded] = useState(false);
    
 
-    // Toggle dark mode
+    
     const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
     const loadFonts = async () => {
         await Font.loadAsync({
-            'Lobster-Regular': require('../assets/fonts/Lobster-Regular.ttf'), // Update with your font
+            'Lobster-Regular': require('../assets/fonts/Lobster-Regular.ttf'), 
         });
     };
     useEffect(() => {
-        loadFonts().then(() => setFontsLoaded(true)); // Load fonts and set loaded state
+        loadFonts().then(() => setFontsLoaded(true)); 
     },);
     
 
 
-    // Choose styles based on dark mode state
+    
     const styles = isDarkMode ? darkStyles : lightStyles;
     const Fontstyles = isDarkMode ? darkFont : lightFonts;
 
     if (!fontsLoaded) {
-        return <AppLoading />; // Show loading screen until fonts are loaded
+        return <AppLoading />; 
     }
 
     return(

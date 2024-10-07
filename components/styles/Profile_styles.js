@@ -11,10 +11,10 @@ const lightStyles = StyleSheet.create({
         
     },
     imageContainer: {
-        borderRadius: 75, // Circular border for image
+        borderRadius: 75, 
         overflow: 'hidden',
         marginBottom: 10,
-        elevation: 5, // Shadow effect on Android
+        elevation: 5, 
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
@@ -36,19 +36,19 @@ const lightStyles = StyleSheet.create({
     
     descriptionContainer: {
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-         // White background inside the container
-    borderColor: 'rgba(144, 238, 144, 1)', // Light green border color (matching Ghibli's peaceful tones)
+         
+    borderColor: 'rgba(144, 238, 144, 1)', 
     borderWidth: 2,
-    shadowColor: 'rgba(144, 238, 144, 0.8)', // Light green glow effect
-    shadowOffset: { width: 0, height: 0 }, // Center the shadow for an even glow
-    shadowOpacity: 0.9, // Intensity of the glow
-    shadowRadius: 20, // The spread of the glow (for iOS)
-    elevation: 15, // Glow effect for Android// White background for contrast
+    shadowColor: 'rgba(144, 238, 144, 0.8)', 
+    shadowOffset: { width: 0, height: 0 }, 
+    shadowOpacity: 0.9, 
+    shadowRadius: 20, 
+    elevation: 15, 
         borderRadius: 10,
         padding: 15,
         marginBottom: 20,
-        width: '100%', // Full width for description container
-        elevation: 10, // Shadow effect for depth
+        width: '100%', 
+        elevation: 10, 
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
